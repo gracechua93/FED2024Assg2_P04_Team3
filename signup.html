@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Sign Up - MokeSell</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="top-header">
+                    <div class="logo italiana-regular">MokeSell</div>
+                    <div class="login italiana-regular"><a href="login.html">Login</a></div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="auth-container">
+            <h1 class="playfair-display">Sign Up</h1>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name" class="lato-regular">Name:</label>
+                    <input type="text" id="signup-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email" class="lato-regular">Email:</label>
+                    <input type="email" id="signup-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password" class="lato-regular">Password:</label>
+                    <input type="password" id="signup-password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="lato-regular">Sign Up</button>
+            </form>
+            <p class="lato-regular">Already have an account? <a href="login.html">Login</a></p>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
