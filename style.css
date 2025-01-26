@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+    font-family: lato-regular;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* fonts */
+.italiana-regular {
+    font-family: "Italiana", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*<uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 400 to 900 */
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    padding: 10px 30px;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header .top-header .login {
+    color: black;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+header .top-header {  
+    color: black;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header .top-header .search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .top-header .search-bar input {
+    padding: 6px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    border-radius: 0;
+    width: 50%;
+    transition: border-bottom-color 0.3s;
+}
+
+header .top-header .search-bar input:focus {
+    border-bottom-color: #555;
+}
+
+header .top-header .search-bar button {
+    padding: 6px 12px;
+    background: #555;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+header .top-header .search-bar button:hover {
+    background: #777;
+}
+
+header .top-header .login {
+    color: #fff;
+    font-size: 1em;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Banner Section */
+
+.banner {
+    text-align: left;
+    padding: 40px 30px;
+    background: #eee;
+    height: 500px;
+}
+
+.banner h1 {
+    font-size: 4.5em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Categories Section */
+.popular-categories {
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    height: 700px;
+}
+
+.popular-categories h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    height: 450px;
+}
+
+.category {
+    background: #ddd;
+    font-size: 1.5em;
+    padding: 30px;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Listings Section */
+.new-listings {
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    margin-top: 20px;
+    height: 700px;
+}
+
+.new-listings h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.listings {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    height: 450px;
+}
+
+.listing {
+    background: #ddd;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+footer .logo {
+    font-size: 2em;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+footer .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.footer-links div {
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
