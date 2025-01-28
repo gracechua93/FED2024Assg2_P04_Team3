@@ -3,8 +3,7 @@ This is my FED Assignment 2.
 
 ## Project Overview
 MokeSell is an online platform that serves as a consumer-to-consumer marketplace for buying and
-selling new and second-hand items. The website takes a modern, minimalist approach and focuses on clean layouts, intuitive navigation, and clear typography, enabling users to achieve their core objectives—buying or selling items—without unnecessary distractions.  
-By incorporating responsive design, MokeSell ensures a seamless experience for both mobile and desktop users, making the platform adaptable to various devices and user needs.
+selling new and second-hand items. The website takes a modern, minimalist approach and focuses on clean layouts, intuitive navigation, and clear typography, enabling users to achieve their core objectives—buying or selling items—without unnecessary distractions. By incorporating responsive design, MokeSell ensures a seamless experience for both mobile and desktop users, making the platform adaptable to various devices and user needs.
 
 ## Design Process
 The design process of MokeSell focused on understanding the needs of both sellers and buyers to create a platform that facilitates quick and secure transactions.  
