@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: white;
     color: black;
 }
 
@@ -132,7 +132,7 @@ header nav ul li a {
 /* Categories Section */
 .popular-categories {
     padding: 30px;
-    background: #fff;
+    background: #f9f9f9;
     text-align: center;
     height: 700px;
 }
@@ -177,7 +177,7 @@ button:hover {
 /* Listings Section */
 .new-listings {
     padding: 30px;
-    background: #fff;
+    background: #f9f9f9;
     text-align: center;
     margin-top: 20px;
     height: 700px;
@@ -335,6 +335,7 @@ footer .heading {
 .category-buttons button {
     padding: 10px;
     border: 1px solid #ccc;
+    color: black;
     background-color: white;
     cursor: pointer;
 }
