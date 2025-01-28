@@ -50,10 +50,9 @@ header .logo {
     font-weight: bold;
 }
 
-header .top-header .login {
+header .top-header .login a {
     color: black;
     font-size: 1.5em;
-    text-decoration: none;
 }
 
 header .top-header {  
@@ -84,22 +83,16 @@ header .top-header .search-bar input:focus {
     border-bottom-color: #555;
 }
 
-header .top-header .search-bar button {
-    padding: 6px 12px;
-    background: #555;
-    color: #fff;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
+header .top-header .search-bar .search{
+    margin-top: 30px;
 }
 
-header .top-header .search-bar button:hover {
-    background: #777;
+header .top-header .account {
+    margin: 5px 10px;
 }
 
-header .top-header .login {
-    color: #fff;
-    font-size: 1em;
+header .top-header .cart {
+    margin: 5px 0 5px 20px ;
 }
 
 
