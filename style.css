@@ -295,9 +295,9 @@ footer .heading {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
-    padding: 40px;
+    padding: 20px;
 }
 
 .customer-service, .feedback-form {
@@ -310,7 +310,7 @@ footer .heading {
 }
 
 .customer-service, .feedback-form, .faq {
-    padding: 40px;
+    padding: 20px;
     max-width: 800px;
 }
 
@@ -319,25 +319,85 @@ footer .heading {
     flex-direction: column;
 }
 
-.feedback-form input, .feedback-form textarea {
+.feedback-form .input-group {
+    display: flex;
+    gap: 20px;
     margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+}
+
+.feedback-form .submit {
+    width: 150px;
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-form p {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.input-container #message {
+    margin-top: 30px;
 }
 
 .category-buttons {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
     margin-bottom: 10px;
 }
 
 .category-buttons button {
-    padding: 10px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     color: black;
     background-color: white;
     cursor: pointer;
+}
+
+.category-buttons button:hover {
+    background-color: #f0f0f0; 
+}
+
+.category-buttons button:active, 
+.category-buttons button.selected { 
+    background-color: black;
+    color: white;
+}
+
+/* FAQ */
+.faq h2 {
+    font-size: 3em;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1.2em;
 }
 
 .faq-item {
@@ -345,4 +405,9 @@ footer .heading {
     padding: 15px;
     margin: 10px 0;
     border-radius: 5px;
+    width: 100%;
+}
+
+.faq-item h3 {
+    font-family: "merriweather-regular";
 }

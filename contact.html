@@ -48,36 +48,69 @@
                 <p>Monday - Friday 9:00am - 7:00pm SGT</p>
             </section>
             
-            <section class="feedback-form">
-                <h2>Submit Your Feedback</h2>
+            <section class="feedback-form lato-regular">
                 <form>
-                    <input type="text" placeholder="First Name*" required>
-                    <input type="text" placeholder="Last Name*" required>
-                    <input type="email" placeholder="Email*" required>
-                    <label>Category*</label>
-                    <div class="category-buttons">
-                        <button type="button">Bug Report</button>
-                        <button type="button">General Inquiry</button>
-                        <button type="button">Feature Suggestion</button>
+                    <div class="input-group">
+                        <div class="input-container">
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name">
+                        </div>
+                        <div class="input-container">
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name">
+                        </div>
                     </div>
-                    <textarea placeholder="Write a message"></textarea>
-                    <button type="submit">Submit</button>
+                    <div class="input-container">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="input-container">
+                        <label>Category*</label>
+                        <div class="category-buttons">
+                            <button type="button">Bug Report</button>
+                            <button type="button">General Inquiry</button>
+                            <button type="button">Feature Suggestion</button>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <label for="message">Write a message</label>
+                        <input type="text" name="message" id="message">
+                    </div>
+                    <button type="submit" class="submit">Submit</button>
+                    <p>Looking for quick answers? Check out our FAQ section below before submitting your feedback!"</p>
                 </form>
             </section>
         </div>
-        <section class="faq">
-            <h2>FAQ</h2>
-            <div class="faq-item">
-                <h3>What payment methods do you accept?</h3>
-                <p>We accept Credit/Debit Cards, PayPal, and Digital Wallets like Apple Pay and Google Pay.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How long does it take to get a response?</h3>
-                <p>Our support team typically responds within 24-48 hours.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I contact customer support?</h3>
-                <p>Email us at support@mokesell.com.</p>
+        <section class="faq lato-regular">
+            <h2 class="playfair-display">FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept Credit/Debit Cards, PayPal, and Digital Wallets like Apple Pay and Google Pay.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does it take to get a response?</h3>
+                    <p>Our support team typically responds within 24-48 hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I contact customer support?</h3>
+                    <p>You can reach us through our Contact Page or email us directly at support@mokesell.com.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I apply a bump for my listings?</h3>
+                    <p>Click on your account at the top of the page. Select the seller option and it will bring you to the seller page. 
+                        Click on the Promote header on the left and you will be able to apply it there.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my personal information secure?</h3>
+                    <p>Yes, we take data privacy seriously. Your information is only used to resolve your feedback and will not be shared with third parties.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Why am I unable to log in to my account?</h3>
+                    <p>Ensure your email and password are entered correctly.<br>
+                        Check if your account is activated (verify your email).<br>
+                        If you’re still facing issues, contact our support team at support@mokesell.com.</p>
+                </div>
             </div>
         </section>
 
@@ -102,5 +135,6 @@
             </div>
             <p>© 2025 MokeSell. All Rights Reserved.</p>
         </footer>
+        <script src="script.js"></script>
     </body>
-</html>
+</html

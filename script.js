@@ -77,3 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+document.querySelectorAll(".category-buttons button").forEach(button => {
+    button.addEventListener("click", function() {
+        document.querySelectorAll(".category-buttons button").forEach(btn => btn.classList.remove("selected")); // Remove class from all
+        this.classList.add("selected"); // Add class to clicked button
+    });
+});
