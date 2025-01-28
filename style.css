@@ -311,7 +311,7 @@ footer .heading {
 
 .customer-service, .feedback-form, .faq {
     padding: 20px;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .feedback-form form {
@@ -389,23 +389,30 @@ footer .heading {
 }
 
 /* FAQ */
+.faq {
+    height: 1000px;
+}
+
 .faq h2 {
     font-size: 3em;
 }
 
 .faq-container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 50% 50%; 
     font-size: 1.2em;
+    gap: 1%;
 }
 
 .faq-item {
     background: #f9f9f9;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 5px;
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
 }
 
 .faq-item h3 {
