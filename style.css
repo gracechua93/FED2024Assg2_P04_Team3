@@ -427,3 +427,154 @@ footer .heading {
 .faq-item h3 {
     font-family: "merriweather-regular";
 }
+
+/* shop-all */
+#shop-all-page {
+    display: flex; /* Arrange children side by side */
+    gap: 20px; /* Space between the two sections */
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Browse Section */
+#browse-section {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+}
+
+#browse-section h2 {
+    border-bottom: 2px solid #D9D9D9;
+}
+
+#categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 180px;
+}
+
+#categories-item {
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.subcategory-overlay {
+    display: none; 
+    position: absolute; /* Position relative to the category item */
+    left: 180px; /* Align to the right of the category */
+    top: 0;
+    width: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.subcategory-overlay ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.subcategory-overlay ul li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.subcategory-overlay ul li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show overlay on hover */
+.category-item:hover .subcategory-overlay {
+    display: block;
+    z-index: 2;
+}
+
+/* Product Grid */
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    gap: 20px;
+    padding: 30px;
+}
+
+#product-list {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+#product-list h2 {
+    font-size: 3em;
+    text-align: left;
+    margin: 5px 0 0 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 400px;
+}
+
+/* Price filter */
+.price-container {
+    text-align: left;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    background: black;
+    height: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-moz-range-track {
+    background: black;
+    height: 5px;
+    border-radius: 20px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="range"]::-ms-track {
+    background: black;
+    height: 5px;
+    border-radius: 10px;
+    border-color: transparent;
+    border-width: 0;
+}
+
+input[type="range"]::-ms-thumb {
+    background: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.range-numbers {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.range-min, .range-max {
+    font-size: 14px;
+}
