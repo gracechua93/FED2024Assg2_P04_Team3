@@ -78,9 +78,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+const path = window.location.pathname;
+
 document.querySelectorAll(".category-buttons button").forEach(button => {
     button.addEventListener("click", function() {
         document.querySelectorAll(".category-buttons button").forEach(btn => btn.classList.remove("selected")); // Remove class from all
         this.classList.add("selected"); // Add class to clicked button
     });
 });
+
+if (path.includes("contact.html")) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      })
+    })
+  
+    const hiddenInfo = document.querySelectorAll(".faq-item");
+    hiddenInfo.forEach((el) => observer.observe(el));
+  
+  }
