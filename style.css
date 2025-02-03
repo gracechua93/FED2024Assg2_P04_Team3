@@ -530,6 +530,8 @@ footer .heading {
     border-radius: 10px;
     height: 380px;
     padding: 10px;
+    cursor: pointer; /* Changes the cursor to a pointer to indicate interactivity */
+    transition: transform 0.2s ease; /* Adds a hover effect for a smoother interaction */
 }
 
 .product-item img {
@@ -537,7 +539,15 @@ footer .heading {
     border-radius: 5px;
 }
 
+.product-link {
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Keeps the text color the same as the parent element */
+    display: inline-block; /* Ensures the link behaves like a block for the div */
+}
 
+.product-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
 
 /* Price filter */
 .price-container {
@@ -631,8 +641,10 @@ input[type="range"]::-ms-thumb {
     padding-left: 17px;
 }
 
+/* Seller info */
 #seller-info {
     margin: 30px;
+    height: 700px;
 }
 
 #seller-info h2 {
@@ -653,4 +665,40 @@ input[type="range"]::-ms-thumb {
     background-color: #D9D9D9;
     height: 500px;
     width: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#seller-main {
+    display: flex;
+    align-items: center; /* Aligns image and details vertically */
+    gap: 20px; /* Adds space between the image and text */
+}
+
+#seller-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#seller-details p {
+    margin: 0;
+}
+
+#seller-details img {
+    flex-shrink: 0; /* Ensures the image doesn't shrink */
+}
+
+#seller-buttons button {
+    height: 50px;
+    font-size: 1em;
+    margin: 0 20px 0 0;
+}
+
+#seller-card-description h3 {
+    margin: 0;
+}
+
+#seller-card-description p {
+    margin: 0;
 }
