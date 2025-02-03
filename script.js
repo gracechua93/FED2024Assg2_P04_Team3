@@ -100,4 +100,24 @@ if (path.includes("contact.html")) {
     const hiddenInfo = document.querySelectorAll(".faq-item");
     hiddenInfo.forEach((el) => observer.observe(el));
   
-  }
+}
+
+else if (path.includes("login.html")) {
+    // Handle login form submission
+    document.getElementById('login-form').addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form submission
+
+        // Show the loading animation
+        const loadingDiv = document.getElementById('loading-animation');
+        loadingDiv.style.display = 'flex';
+
+        // Simulate server processing (e.g., 3 seconds delay)
+        setTimeout(() => {
+            // Hide the loading animation
+            loadingDiv.style.display = 'none';
+
+            // Redirect to index
+            window.location.href = 'index.html';
+        }, 3000);
+    });
+}
