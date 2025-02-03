@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     background-color: white;
     color: black;
+    overflow-x: hidden;
 }
 
 a {
@@ -500,7 +501,7 @@ footer .heading {
 #product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
-    gap: 20px;
+    gap: 30px;
     padding: 30px;
 }
 
@@ -516,12 +517,27 @@ footer .heading {
     margin: 5px 0 0 20px;
 }
 
+.product-item h3 {
+    margin: 10px 0 0 0;
+}
+
+.product-item p {
+    margin: 0;
+}
 .product-item {
     background-color: #fff;
     border: 1px solid black;
     border-radius: 10px;
-    height: 400px;
+    height: 380px;
+    padding: 10px;
 }
+
+.product-item img {
+    background-color: #CEBAAB;
+    border-radius: 5px;
+}
+
+
 
 /* Price filter */
 .price-container {
