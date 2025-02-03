@@ -594,3 +594,63 @@ input[type="range"]::-ms-thumb {
 .range-min, .range-max {
     font-size: 14px;
 }
+
+/* Product Info */
+#product-details {
+    margin: 20px;
+    display: flex;
+    gap: 100px;
+}
+
+#product-info {
+    margin: 30px;
+}
+
+#product-info h2 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 2em;
+}
+
+#product-info h3 {
+    margin: 0;
+}
+
+#product-info p {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+#product-info #product-description {
+    font-size: 1em;
+}
+
+#product-info #product-details-list {
+    margin: 0;
+    padding-left: 17px;
+}
+
+#seller-info {
+    margin: 30px;
+}
+
+#seller-info h2 {
+    font-size: 2.3em;
+    margin-bottom: 0;
+}
+
+.line {
+    width: 90%; /* Adjust to match the length of the word */
+    height: 2px;
+    background-color: grey;
+    margin-top: 5px; /* Adds space between the word and the line */
+}
+
+#seller-card {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #D9D9D9;
+    height: 500px;
+    width: 470px;
+}
