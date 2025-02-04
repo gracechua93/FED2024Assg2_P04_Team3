@@ -51,6 +51,14 @@ header .logo {
     font-weight: bold;
 }
 
+header .name {
+    font-size: 1.5em;
+}
+
+header .account-icon {
+    display: flex;
+}
+
 header .top-header .login a {
     color: black;
     font-size: 1.5em;
@@ -94,7 +102,7 @@ header .top-header .search-bar input:focus {
 }
 
 header .top-header .search-bar .search{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 header .top-header .account {
@@ -690,6 +698,14 @@ input[type="range"]::-ms-thumb {
     background-color: grey;
     margin-top: 5px; /* Adds space between the word and the line */
     margin-bottom: 30px;
+}
+
+
+.line3 {
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+    margin: 20px 0 30px 0;
 }
 
 #seller-card {
