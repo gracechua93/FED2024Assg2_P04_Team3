@@ -41,58 +41,60 @@
                     <ul class="menu">
                     <li>
                         <div class="menu-item">
-                        <div class="icon">
-                            <img src="../Images/home.png" alt="" width="30px" height="30px">
-                        </div>
-                        <span>Home</span>
+                            <div class="icon">
+                                <img src="../Images/home.png" alt="" width="30px" height="30px">
+                            </div>
+                            <span>Home</span>
                         </div>
                     </li>
                     <li>
-                        <div class="menu-item dropdown">
-                        <div class="icon">
-                            <img src="../Images/box-open.png" alt="" width="30px" height="30px">
-                        </div>
-                        <span>Products</span>
-                        <div class="arrow">
-                            <img src="../Images/down-chevron.png" alt="" width="20px" height="20px">
-                        </div>
+                        <div class="product-container">
+                            <div class="menu-item dropdown">
+                                <div class="icon">
+                                    <img src="../Images/box-open.png" alt="" width="30px" height="30px">
+                                </div>
+                                <span>Products</span>
+                                <div class="arrow">
+                                    <img src="../Images/down-chevron.png" alt="" width="20px" height="20px">
+                                </div>
+                            </div>
                         </div>
                         <ul class="submenu">
-                        <li>Dashboard</li>
-                        <li>Drafts</li>
-                        <li>Released</li>
-                        <li>Scheduled</li>
+                            <li>Dashboard</li>
+                            <li>Drafts</li>
+                            <li>Released</li>
+                            <li>Scheduled</li>
                         </ul>
                     </li>
                     <li>
                         <div class="menu-item">
-                        <div class="icon">
-                            <img src="../Images/user-bag.png" alt="" width="30px" height="30px">
-                        </div>
-                        <span>Customers</span>
+                            <div class="icon">
+                                <img src="../Images/user-bag.png" alt="" width="30px" height="30px">
+                            </div>
+                            <span>Customers</span>
                         </div>
                     </li>
                     <li>
                         <div class="menu-item">
-                        <div class="icon">
-                            <img src="../Images/shop.png" alt="" width="30px" height="30px">
-                        </div>
-                        <span>Shop</span>
+                            <div class="icon">
+                                <img src="../Images/shop.png" alt="" width="30px" height="30px">
+                            </div>
+                            <span>Shop</span>
                         </div>
                     </li>
                     <li>
                         <div class="menu-item dropdown">
-                        <div class="icon">
-                            <img src="../Images/chart-mixed-up-circle-dollar.png" alt="" width="30px" height="30px">
-                        </div>
-                        <span>Income</span>
-                        <div class="arrow">
-                            <img src="../Images/down-chevron.png" alt="" width="20px" height="20px">
-                        </div>
+                            <div class="icon">
+                                <img src="../Images/chart-mixed-up-circle-dollar.png" alt="" width="30px" height="30px">
+                            </div>
+                            <span>Income</span>
+                            <div class="arrow">
+                                <img src="../Images/down-chevron.png" alt="" width="20px" height="20px">
+                            </div>
                         </div>
                         <ul class="submenu">
-                        <li>Option 1</li>
-                        <li>Option 2</li>
+                            <li>Revenue</li>
+                            <li>Profit</li>
                         </ul>
                     </li>
                     <li>
@@ -132,7 +134,8 @@
                         <h2 class="merriweather-regular">Images & CTA</h2>
                         <label for="cover-images">Cover Images</label>
                         <div id="cover-images" class="image-uploader">
-                          <button>Click or drop image</button>
+                          <button id="upload-button">Click or Drop Image</button>
+                          <input type="file" id="file-input" style="display: none;" accept="image/*" />
                         </div>
                         <label for="dropdown">Dropdown</label>
                         <select id="dropdown">

@@ -131,5 +131,35 @@ else if (path.includes("create-listing.html")) {
                 submenu.classList.toggle('show'); // Toggle the 'show' class
             }
         });
-      });
+    });
+
+    // Get the arrow and submenu elements
+    const arrow = document.querySelectorAll('.arrow');
+    const submenu = document.querySelectorAll('.submenu');
+    
+    // Add a click event listener to toggle the submenu visibility
+    arrow.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            submenu[index].classList.toggle('show'); // Toggle the 'show' class
+        });
+    })
+
+
+    // Get the button and file input
+    const uploadButton = document.getElementById('upload-button');
+    const fileInput = document.getElementById('file-input');
+
+    // Trigger file input when the button is clicked
+    uploadButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        fileInput.click();
+    });
+
+    // Handle the file selection
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            console.log(`File selected: ${file.name}`);
+        }
+    });
 }
