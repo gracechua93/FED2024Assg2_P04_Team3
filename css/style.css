@@ -685,7 +685,7 @@ input[type="range"]::-ms-thumb {
 }
 
 .line2 {
-    width: 95%;
+    width: 1040px;
     height: 2px;
     background-color: grey;
     margin-top: 5px; /* Adds space between the word and the line */
@@ -739,7 +739,7 @@ input[type="range"]::-ms-thumb {
 
 /* nav side-bar */
 #nav-sidebar {
-    width: 250px;
+    width: auto;
     height: auto;
     padding: 20px;
 }
@@ -779,9 +779,16 @@ input[type="range"]::-ms-thumb {
 }
 
 /* create-listing */
+#create-product-listing {
+    display: flex;
+    margin: 30px;
+    gap: 20px;
+}
+
 #create-listing {
     height: auto;
-    width: 100%;
+    max-width: 100%;
+    padding: 20px;
 }
 
 #create-listing h1 {
@@ -790,24 +797,133 @@ input[type="range"]::-ms-thumb {
     margin: 0;
 }
 
-#create-product-listing {
-    display: flex;
-    margin: 30px;
-}
-
 #create-product-content {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
     gap: 20px;
 }
 
-.section {
-    background-color: #e6e6e6;
-    padding: 20px;
+#create-product-content .section {
+    background-color: #DBE2E9;
+    padding: 30px;
     border-radius: 8px;
-    width: 90%;
+    box-shadow:  0px 5px 5px rgba(115, 134, 152, 0.5);
 }
 
+.section h2 {
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+}
+
+/* Form Inputs */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Key Features */
+.key-features {
+    display: flex;
+    gap: 10px;
+}
+
+.key-features input[type="text"] {
+    flex: 1;
+}
+  
+/* Image Upload */
+.image-uploader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    height: 100px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+  
+.image-uploader button {
+    background: rgb(40, 132, 237);
+    border: none;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.image-uploader button:hover {
+    background-color: rgb(12, 77, 168);
+}
+
+/* Price Section */
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.price-row div {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.toggle-buttons {
+    display: flex;
+    gap: 10px; /* Adds spacing between buttons */
+    align-items: center;
+}
+
+.toggle-button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px; 
+    justify-content: flex-end; 
+    align-items: center; 
+}
+
+.action-buttons button {
+    margin: 0;
+    background-color: #B0C8DB;
+}
+
+.action-buttons button:hover {
+    background-color: #90a5b8;
+}
 
 /* game */
 #spin-to-win {

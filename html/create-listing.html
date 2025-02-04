@@ -108,27 +108,28 @@
             </section>
 
 
-            <section id="create-listing">
+            <section id="create-listing" class="lato-regular">
                 <h1 class="playfair-display">New Product</h1>
                 <div class="line2"></div>
                 <form id="create-product-content">
                     <div class="section">
-                        <h2>Name & Description</h2>
+                        <h2 class="merriweather-regular">Name & Description</h2>
                         <label for="product-title">Product Title</label>
                         <input type="text" id="product-title" placeholder="Enter product title" />
                   
                         <label for="description">Description</label>
                         <textarea id="description" placeholder="Write a brief description"></textarea>
-                  
+
+                        <label for="key-features">Key Features</label>
                         <div class="key-features">
-                          <input type="text" placeholder="Key Feature 1" />
-                          <input type="text" placeholder="Key Feature 2" />
-                          <input type="text" placeholder="Key Feature 3" />
+                            <input type="text" placeholder="Key Feature 1" />
+                            <input type="text" placeholder="Key Feature 2" />
+                            <input type="text" placeholder="Key Feature 3" />
                         </div>
                     </div>
 
                     <div class="section">
-                        <h2>Images & CTA</h2>
+                        <h2 class="merriweather-regular">Images & CTA</h2>
                         <label for="cover-images">Cover Images</label>
                         <div id="cover-images" class="image-uploader">
                           <button>Click or drop image</button>
@@ -142,27 +143,32 @@
                     </div>
 
                     <div class="section">
-                        <h2>Price</h2>
+                        <h2 class="merriweather-regular">Price</h2>
                         <label for="amount">Amount</label>
                         <div class="price-row">
-                          <span>$</span>
+                          <div>$</div>
                           <input type="number" id="amount" placeholder="Enter price" />
                         </div>
-                        <label>Allow customers to pay what they want</label>
-                        <button type="button" class="toggle-button">Y/N</button>
+                        <div class="toggle-container">
+                            <label>Allow customers to pay what they want</label>
+                            <div class="toggle-buttons">
+                                <button type="button" class="toggle-button">Yes</button>
+                                <button type="button" class="toggle-button">No</button>
+                            </div>
+                        </div>
                   
                         <div class="price-suggestions">
                           <div>
                             <label for="min-amount">Minimum amount</label>
                             <div class="price-row">
-                              <span>$</span>
+                              <div>$</div>
                               <input type="number" id="min-amount" placeholder="Enter minimum amount" />
                             </div>
                           </div>
                           <div>
                             <label for="suggested-amount">Suggested amount</label>
                             <div class="price-row">
-                              <span>$</span>
+                              <div>$</div>
                               <input type="number" id="suggested-amount" placeholder="Enter suggested amount" />
                             </div>
                           </div>
@@ -170,20 +176,26 @@
                     </div>
 
                     <div class="section">
-                        <h2>Category & Attributes</h2>
+                        <h2 class="merriweather-regular">Category & Attributes</h2>
                         <label for="category">Category</label>
                         <select id="category">
                           <option>Select a category</option>
-                          <option>Clothing</option>
-                          <option>Accessories</option>
-                          <option>Footwear</option>
+                          <option>Fashion & Accessories</option>
+                          <option>Electronics</option>
+                          <option>Home & Furniture</option>
+                          <option>Books, Music & Media</option>
+                          <option>Sports & Outdoors</option>
+                          <option>Health & Beauty</option>
                         </select>
                   
                         <label for="brand">Brand</label>
                         <select id="brand">
                           <option>Select a brand</option>
-                          <option>Brand A</option>
-                          <option>Brand B</option>
+                          <option>Nike</option>
+                          <option>Uniqlo</option>
+                          <option>IKEA</option>
+                          <option>Decathlon</option>
+                          <option>Not Applicable</option>
                         </select>
                   
                         <label for="country-origin">Country of Origin</label>
@@ -192,6 +204,10 @@
                           <option>USA</option>
                           <option>India</option>
                           <option>China</option>
+                          <option>Singapore</option>
+                          <option>Malaysia</option>
+                          <option>Thailand</option>
+                          <option>Europe</option>
                         </select>
                   
                         <label for="material">Material</label>
@@ -199,12 +215,23 @@
                           <option>Select material</option>
                           <option>Cotton</option>
                           <option>Polyester</option>
+                          <option>Metal</option>
+                          <option>Leather</option>
+                          <option>Plastic</option>
+                          <option>Wood</option>
+                          <option>Ceramic</option>
                         </select>
 
                         <label for="tags">Tags</label>
                         <input type="text" id="tags" placeholder="Enter tags" />
                     </div>
 
+                    <div class="section">
+                        <div class="action-buttons">
+                            <button type="button">Save Draft</button>
+                            <button type="button">Publish</button>
+                        </div>
+                    </div>
 
 
 
