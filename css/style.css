@@ -727,3 +727,57 @@ input[type="range"]::-ms-thumb {
     margin: 0;
 }
 
+
+/* nav side-bar */
+#nav-sidebar {
+    margin: 30px;
+    width: 250px;
+    background-color: #f7f7f7;
+    height: auto;
+    padding: 20px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.arrow {
+    height: 20px;
+}
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+}
+
+.submenu li {
+    padding: 0.25rem 0;
+    color: #555;
+}
+
+.submenu.show {
+    display: block;
+}
+
+/* create-listing */
+#create-listing {
+    margin: 30px;
+}
+
+
+/* game */
+#spin-to-win {
+    margin: 30px;
+}

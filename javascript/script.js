@@ -121,3 +121,15 @@ else if (path.includes("login.html")) {
         }, 3000);
     });
 }
+
+else if (path.includes("create-listing.html")) {
+    document.querySelectorAll('arrow').forEach(dropdown => {
+        dropdown.addEventListener('click', () => {
+            const dropdown = event.target.closest('.menu-item');
+            const submenu = dropdown.nextElementSibling; // Find the corresponding submenu
+            if (submenu) {
+                submenu.classList.toggle('show'); // Toggle the 'show' class
+            }
+        });
+      });
+}
