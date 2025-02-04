@@ -681,6 +681,15 @@ input[type="range"]::-ms-thumb {
     height: 2px;
     background-color: grey;
     margin-top: 5px; /* Adds space between the word and the line */
+    margin-bottom: 30px;
+}
+
+.line2 {
+    width: 95%;
+    height: 2px;
+    background-color: grey;
+    margin-top: 5px; /* Adds space between the word and the line */
+    margin-bottom: 30px;
 }
 
 #seller-card {
@@ -730,9 +739,7 @@ input[type="range"]::-ms-thumb {
 
 /* nav side-bar */
 #nav-sidebar {
-    margin: 30px;
     width: 250px;
-    background-color: #f7f7f7;
     height: auto;
     padding: 20px;
 }
@@ -773,7 +780,32 @@ input[type="range"]::-ms-thumb {
 
 /* create-listing */
 #create-listing {
+    height: auto;
+    width: 100%;
+}
+
+#create-listing h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#create-product-listing {
+    display: flex;
     margin: 30px;
+}
+
+#create-product-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
 }
 
 
