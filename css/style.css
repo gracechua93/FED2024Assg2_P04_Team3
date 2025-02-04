@@ -717,3 +717,14 @@ input[type="range"]::-ms-thumb {
 #seller-card-description p {
     margin: 0;
 }
+
+.top-header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.top-header .logo:hover {
+    color: #555;
+}
