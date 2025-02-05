@@ -123,16 +123,6 @@ else if (path.includes("login.html")) {
 }
 
 else if (path.includes("create-listing.html")) {
-    document.querySelectorAll('arrow').forEach(dropdown => {
-        dropdown.addEventListener('click', () => {
-            const dropdown = event.target.closest('.menu-item');
-            const submenu = dropdown.nextElementSibling; // Find the corresponding submenu
-            if (submenu) {
-                submenu.classList.toggle('show'); // Toggle the 'show' class
-            }
-        });
-    });
-
     // Get the arrow and submenu elements
     const arrow = document.querySelectorAll('.arrow');
     const submenu = document.querySelectorAll('.submenu');
@@ -163,3 +153,43 @@ else if (path.includes("create-listing.html")) {
         }
     });
 }
+
+else if (path.includes('purchase-history.html')) {
+    // Get the arrow and submenu elements
+    const arrow = document.querySelectorAll('.arrow');
+    const submenu = document.querySelectorAll('.submenu');
+    
+    // Add a click event listener to toggle the submenu visibility
+    arrow.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            submenu[index].classList.toggle('show'); // Toggle the 'show' class
+        });
+    })
+}
+
+else if (path.includes('account.html')) {
+    // Get the arrow and submenu elements
+    const arrow = document.querySelectorAll('.arrow');
+    const submenu = document.querySelectorAll('.submenu');
+    
+    // Add a click event listener to toggle the submenu visibility
+    arrow.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            submenu[index].classList.toggle('show'); // Toggle the 'show' class
+        });
+    })
+}
+
+else if (path.includes('promote.html')) {
+    // Get the arrow and submenu elements
+    const arrow = document.querySelectorAll('.arrow');
+    const submenu = document.querySelectorAll('.submenu');
+    
+    // Add a click event listener to toggle the submenu visibility
+    arrow.forEach((arrow, index) => {
+        arrow.addEventListener('click', () => {
+            submenu[index].classList.toggle('show'); // Toggle the 'show' class
+        });
+    })
+}
+
