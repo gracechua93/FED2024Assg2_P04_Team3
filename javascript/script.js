@@ -193,3 +193,34 @@ else if (path.includes('promote.html')) {
     })
 }
 
+// support
+document.addEventListener('DOMContentLoaded', () => {
+    const surveyForm = document.getElementById('customer-survey');
+
+    surveyForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Collect form data
+        const formData = {
+            question1: document.querySelector('input[name="question1"]:checked')?.value,
+            question2: document.querySelector('input[name="question2"]:checked')?.value,
+            openEndedResponse: document.querySelector('textarea').value,
+            rating: document.querySelector('input[name="rating"]:checked')?.value
+        };
+
+        // Basic form validation
+        if (!formData.question1 || !formData.question2) {
+            alert('Please answer all multiple-choice questions.');
+            return;
+        }
+
+        // Here you would typically send the data to a server
+        console.log('Survey Submission:', formData);
+        
+        // Optional: Show thank you message
+        alert('Thank you for completing our survey!');
+        surveyForm.reset();
+    });
+});
+
+

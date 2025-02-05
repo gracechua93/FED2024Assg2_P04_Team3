@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display&display=swap" rel="stylesheet">
+        
+        <title>MokeSell - Chat</title>
+    </head>
+    <body>
+        <!-- Main Page Header -->
+        <header>
+            <nav>
+                <div class="top-header">
+                    <div class="logo italiana-regular">
+                        <a href="index.html">MokeSell</a>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <img class="search" src="../Images/search.png" alt="search" width="20" height="20">
+                    </div>
+                    <img class="account" src="../Images/account_3033143.png" alt="account" width="30" height="30">
+                    <div class="login italiana-regular"> 
+                        <a href="login.html" target="_blank">Login</a>
+                        <div class="dropdown-menu lato-regular">
+                            <p><a href="html/account.html">My Account</a></p>
+                            <p><a href="html/purchase-history.html">My Purchase</a></p>
+                            <p>Logout</p>
+                        </div>
+                    </div>
+                    <img class="cart" src="../Images/shopping-bag_10408592.png" alt="shopping cart" width="30" height="30">
+                </div>
+                <ul>
+                    <li class="lato-regular"><a href="shop-all.html">Shop All</a></li>
+                    <li class="lato-regular"><a href="#" target="_blank">About Us</a></li>
+                    <li class="lato-regular"><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <!-- Messages Sidebar -->
+            <div class="messages-sidebar">
+                <div class="message-header">
+                    <h2>Messages</h2>
+                </div>
+                <div class="message-list">
+                    <div class="message-preview active">
+                        <img src="../Images/account_3033143.png" alt="Seller">
+                        <div class="message-preview-content">
+                            <h3>Seller</h3>
+                            <p>You're inquiring about this item</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="chat-window">
+                <div class="message-header">
+                    <img src="../Images/account_3033143.png" alt="Seller">
+                    <div>
+                        <h3>Seller</h3>
+                        <p>Online</p>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <div class="seller-message">
+                        <p>You're inquiring about this item</p>
+                        <div class="message-details">
+                            <p>Product Name</p>
+                            <p>Price</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type a message...">
+                    <button>Send</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <div class="logo italiana-regular">MokeSell</div>
+                <div class="heading playfair-display">Shop
+                    <ul>
+                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="heading playfair-display">Store Policy
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>© 2025 MokeSell. All Rights Reserved.</p>
+        </footer>
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>
