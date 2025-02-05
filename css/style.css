@@ -759,6 +759,12 @@ input[type="range"]::-ms-thumb {
     opacity: 0.5;
 }
 
+.line6 {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
 #seller-card {
     margin-top: 50px;
     padding: 20px;
@@ -1431,6 +1437,59 @@ input:checked + .slider i {
 .purchased-item p {
     margin: 0;
 }
+
+/* Shopping Cart */
+.cart-title {
+    background-color: #eaeaea;
+    height: 100px;
+    padding: 20px;
+}
+
+.cart-title h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.cart-process {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.cart-process div {
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.cart-process div div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
+}
+
+.cart-process h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.cart-header {
+    padding: 30px;
+}
+
+.cart-header section{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* game */
 #spin-to-win {
