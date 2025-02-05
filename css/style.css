@@ -1585,7 +1585,7 @@ input:checked + .slider i {
     font-family: 'Italiana', serif;
 }
 
-/* chat */
+/* chat **/
 .chat-container {
     display: flex;
     height: calc(100vh - 200px);

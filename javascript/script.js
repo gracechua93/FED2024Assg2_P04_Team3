@@ -193,7 +193,7 @@ else if (path.includes('promote.html')) {
     })
 }
 
-// support
+// support function
 document.addEventListener('DOMContentLoaded', () => {
     const surveyForm = document.getElementById('customer-survey');
 
