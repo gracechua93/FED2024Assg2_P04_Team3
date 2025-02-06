@@ -1488,8 +1488,117 @@ input:checked + .slider i {
 .cart-header section{
     display: flex;
     justify-content: space-between;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
+.header-product {
+    flex: 2; /* Allocate more space for the product section */
+    text-align: left; /* Align text to the left */
+}
+
+.header-price, 
+.header-quantity, 
+.header-total {
+    flex: 1; /* Equal spacing for these items */
+}
+
+.cart-content {
+    padding: 0 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-info img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 1.5em;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    width: 20px;
+}
+
+.delete-btn i {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+}
+
+.cart-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    border-top: 2px solid #000;
+}
+
+.shipping-section, .summary, .actions {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shipping-section input, .shipping-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.actions button:last-child {
+    background-color: #ff9900;
+}
+
+.summary {
+    text-align: right;
+}
+
+.summary p {
+    font-size: 1.2em;
+}
+
+.summary span {
+    font-weight: bold;
+}
 
 /* game */
 #spin-to-win {

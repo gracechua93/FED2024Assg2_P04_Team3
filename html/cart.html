@@ -7,7 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display&display=swap" rel="stylesheet">
-        
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
         <title>Shopping Cart - MokeSell</title>
     </head>
     <body>
@@ -46,15 +47,91 @@
             </div>
         </section>
 
-        <section class="cart-header">
+        <section class="cart-header lato-regular">
             <section>
-                <h3>Product</h3>
-                <h3>Price</h3>
-                <h3>Quantity</h3>
-                <h3>Total</h3>
-                <h3>Delete</h3>
+                <div class="header-product">Product</div>
+                <div class="header-price">Price</div>
+                <div class="header-quantity">Quantity</div>
+                <div class="header-total">Total</div>
+                <div class="header-delete">Delete</div>
             </section>
             <div class="line6"></div>
+        </section>
+
+        <section class="cart-content lato-regular">
+            <div class="cart-item">
+                <div class="product-info">
+                    <img src="product1.jpg" alt="Windbreaker">
+                    <div>
+                        <h4>Windbreaker</h4>
+                        <p>Product Code: 4587926</p>
+                        <p>Size: XL</p>
+                        <p>Color: Black</p>
+                    </div>
+                </div>
+                <p>$600</p>
+                <div class="quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <p>$600</p>
+                <button class="delete-btn"><i class="fi fi-br-cross"></i></button>
+            </div>
+
+            <div class="cart-item">
+                <div class="product-info">
+                    <img src="product2.jpg" alt="Carla Parka">
+                    <div>
+                        <h4>Carla Parka</h4>
+                        <p>Product Code: 4587926</p>
+                        <p>Size: XL</p>
+                        <p>Color: Black</p>
+                    </div>
+                </div>
+                <p>$400</p>
+                <div class="quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <p>$400</p>
+                <button class="delete-btn"><i class="fi fi-br-cross"></i></button>
+            </div>
+        
+            <div class="cart-item">
+                <div class="product-info">
+                    <img src="product3.jpg" alt="Lacoste Fashion">
+                    <div>
+                        <h4>Lacoste Fashion</h4>
+                        <p>Product Code: 4587926</p>
+                        <p>Size: XL</p>
+                        <p>Color: Black</p>
+                    </div>
+                </div>
+                <p>$200</p>
+                <div class="quantity">
+                    <input type="number" value="1" min="1">
+                </div>
+                <p>$200</p>
+                <button class="delete-btn"><i class="fi fi-br-cross"></i></button>
+            </div>
+        </section>
+
+        <section class="cart-footer">
+            <div class="shipping-section">
+                <select>
+                    <option>Select Country</option>
+                </select>
+                <select>
+                    <option>State/Province</option>
+                </select>
+                <input type="text" placeholder="Postcode/Zip">
+            </div>
+            <div class="summary">
+                <p>Shipping: <span>Free Shipping</span></p>
+                <p>Total: <span>$1200.00</span></p>
+            </div>
+            <div class="actions">
+                <button>Continue Shopping</button>
+                <button>Proceed to Checkout</button>
+            </div>
         </section>
 
 
