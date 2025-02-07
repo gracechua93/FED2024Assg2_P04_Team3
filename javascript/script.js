@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const data = await response.json();
                     alert(`Login successful! Welcome, ${data.name}`);
                     // Redirect to the homepage or dashboard
-                    window.location.href = "/index.html";
+                    window.location.href = "../index.html";
                 }
             } catch (error) {
                 alert("An error occurred during login. Please try again.");
@@ -194,14 +194,95 @@ else if (path.includes('promote.html')) {
 }
 
 else if (path.includes('shop-all.html')) {
-    // Select all the like buttons
-    const likeButtons = document.querySelectorAll('.like-button i');
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchBar");
+        const products = document.querySelectorAll(".product-item, .product-link");
+        const categoryItems = document.querySelectorAll(".category-item");
+        const priceFilter = document.getElementById("price-range");
+        // Select all the like buttons
+        const likeButtons = document.querySelectorAll('.like-button i');
 
-    // Loop through each button and add an event listener for the 'click' event
-    likeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Toggle the 'liked' class on the <i> element when clicked
-            button.classList.toggle('liked');
+        // Search Functionality
+        searchInput.addEventListener("input", function () {
+            const query = searchInput.value.toLowerCase();
+            products.forEach(product => {
+                const name = product.dataset.name.toLowerCase();
+                product.style.display = name.includes(query) ? "block" : "none";
+            });
+        });
+
+        searchInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                const query = searchInput.value.toLowerCase();
+                products.forEach(product => {
+                    const name = product.dataset.name ? product.dataset.name.toLowerCase() : '';  // Check if data-name exists
+                    product.style.display = name.includes(query) ? "block" : "none";
+                });
+            }
+        });
+
+        // Category Filtering
+        categoryItems.forEach(item => {
+            item.addEventListener("click", function () {
+                const selectedCategory = this.dataset.category;
+        
+                products.forEach(product => {
+                    // Check if it's a product item or wrapped inside a link
+                    const productCategory = product.querySelector('.product-item') ? product.querySelector('.product-item').dataset.category : product.dataset.category;
+                    
+                    if (productCategory === selectedCategory || selectedCategory === "all") {
+                        product.style.visibility = "visible";
+                        product.style.position = "static";
+                    } else {
+                        product.style.visibility = "hidden";
+                        product.style.position = "absolute";
+                    }
+                });
+            });
+        });
+
+        // Price Filtering
+        priceFilter.addEventListener("input", function () {
+            const maxPrice = parseFloat(priceFilter.value);
+            products.forEach(product => {
+                const price = parseFloat(product.dataset.price);
+                product.style.display = price <= maxPrice ? "block" : "none";
+            });
+        });
+
+        // Loop through each button and add an event listener for the 'click' event
+        likeButtons.forEach(button => {
+            // Retrieve the product ID or a unique identifier from the data attribute
+            const productItem = button.closest('.product-item');
+            const productId = productItem.getAttribute('data-id');  // Make sure you add a unique data-id to each product
+
+            // Check if the product is already liked (from localStorage)
+            if (localStorage.getItem(productId) === 'liked') {
+                button.classList.add('liked');
+                button.style.color = 'red'; // Set the color of the heart
+            }
+
+            button.addEventListener('click', () => {
+                // Toggle the 'liked' class on the <i> element when clicked
+                button.classList.toggle('liked');
+                // Change the text depending on whether the button is liked or not
+                if (button.classList.contains('liked')) {
+                    button.style.color = 'red'; // Set color to red when liked
+                    localStorage.setItem(productId, 'liked'); // Store the like in localStorage
+                } else {
+                    button.style.color = 'black'; // Set color back to black when unliked
+                    localStorage.removeItem(productId); // Remove the like from localStorage
+                }
+            });
+        });
+    });
+}
+
+else if (path.includes('checkout.html')) {
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from reloading the page
+            window.location.href = 'order-complete.html'; // Redirect to the order complete page
         });
     });
 }

@@ -166,12 +166,23 @@ header .top-header p a:hover {
 }
 
 /* Banner Section */
-
 .banner {
     text-align: left;
     padding: 40px 30px;
     background: #eee;
     height: 500px;
+    display: flex;
+    justify-content: space-between; /* This will space out the items */
+}
+
+.banner > div {
+    flex: 1;
+}
+
+.banner img {
+    width: 100%; 
+    height: auto; 
+    margin-top: 50px;
 }
 
 .banner h1 {
@@ -213,6 +224,10 @@ header .top-header p a:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.category img {
+    margin-bottom: 30px;
 }
 
 button {
@@ -259,6 +274,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.listing img {
+    margin-bottom: 30px;
 }
 
 /* Footer */
@@ -524,6 +543,7 @@ footer .heading {
     padding: 0;
     margin: 0;
     width: 180px;
+    cursor: pointer;
 }
 
 #categories-item {
