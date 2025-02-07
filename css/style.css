@@ -1622,6 +1622,86 @@ input:checked + .slider i {
     font-weight: bold;
 }
 
+/* Checkout */
+.checkout-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkout-content form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.checkout-form .form-group {
+    width: 100%;
+}
+
+.checkout-form label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.checkout-form input, .checkout-form button {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-form button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    align-self: center; 
+}
+
+.checkout-form button:hover {
+    background-color: #555;
+}
+
+/* order-complete*/
+.order-success-content {
+    padding: 20px;
+    text-align: center;
+    height: 300px;
+}
+
+.order-success-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.order-success-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.order-success-content a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.order-success-content a:hover {
+    background-color: #555;
+}
+
 /* game */
 #spin-to-win {
     margin: 30px;
