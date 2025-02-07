@@ -1,81 +1,61 @@
 // script.js
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.getElementById("login-form");
-    const signupForm = document.getElementById("signup-form");
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBSa4poUSDiUzeoSYLQ820dOAkY6O8GUAI",
+    authDomain: "fedtest-92d2a.firebaseapp.com",
+    projectId: "fedtest-92d2a",
+    storageBucket: "fedtest-92d2a.firebasestorage.app",
+    messagingSenderId: "861537843799",
+    appId: "1:861537843799:web:88ffab07af36ae27344112",
+    measurementId: "G-3QYRFVJXMG"
+};
 
-    // API Base URL and Key
-    const API_BASE_URL = "https://watesigma-85a1.restdb.io/rest/test1"; // Replace with your actual API base URL
-    const API_KEY = "67962c99c5711c1252f2c51d"; // Your API key from the dashboard
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-    // Handle Login Form Submission
-    if (loginForm) {
-        loginForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
+// Google Authentication Function
+const provider = new firebase.auth.GoogleAuthProvider();
 
-            const email = document.getElementById("login-email").value;
-            const password = document.getElementById("login-password").value;
+function googleLogin() {
+    firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            console.log(result.user);
+            alert("Logged in as " + result.user.displayName);
+        })
+        .catch((error) => console.log(error));
+}
 
-            try {
-                const response = await fetch(`${API_BASE_URL}/users/login`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${API_KEY}`
-                    },
-                    body: JSON.stringify({ email, password })
-                });
+// Signup Function
+document.getElementById("signup-form")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let email = document.getElementById("signup-email").value;
+    let password = document.getElementById("signup-password").value;
 
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    alert(`Login failed: ${errorData.message}`);
-                } else {
-                    const data = await response.json();
-                    alert(`Login successful! Welcome, ${data.name}`);
-                    // Redirect to the homepage or dashboard
-                    window.location.href = "../index.html";
-                }
-            } catch (error) {
-                alert("An error occurred during login. Please try again.");
-                console.error("Login Error:", error);
-            }
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert("Signup successful!");
+            window.location.href = "login.html"; // Redirect to login page
+        })
+        .catch((error) => {
+            alert(error.message);
         });
-    }
+});
 
-    // Handle Signup Form Submission
-    if (signupForm) {
-        signupForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
+// Login Function
+document.getElementById("login-form")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let email = document.getElementById("login-email").value;
+    let password = document.getElementById("login-password").value;
 
-            const name = document.getElementById("signup-name").value;
-            const email = document.getElementById("signup-email").value;
-            const password = document.getElementById("signup-password").value;
-
-            try {
-                const response = await fetch(`${API_BASE_URL}/users/signup`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": `Bearer ${API_KEY}`
-                    },
-                    body: JSON.stringify({ name, email, password })
-                });
-
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    alert(`Signup failed: ${errorData.message}`);
-                } else {
-                    const data = await response.json();
-                    alert("Signup successful! Please log in.");
-                    // Redirect to login page
-                    window.location.href = "login.html";
-                }
-            } catch (error) {
-                alert("An error occurred during signup. Please try again.");
-                console.error("Signup Error:", error);
-            }
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert("Login successful!");
+            window.location.href = "dashboard.html"; // Redirect after login
+        })
+        .catch((error) => {
+            alert(error.message);
         });
-    }
 });
 
 const path = window.location.pathname;
