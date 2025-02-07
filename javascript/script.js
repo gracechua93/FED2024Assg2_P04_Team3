@@ -193,6 +193,19 @@ else if (path.includes('promote.html')) {
     })
 }
 
+else if (path.includes('shop-all.html')) {
+    // Select all the like buttons
+    const likeButtons = document.querySelectorAll('.like-button i');
+
+    // Loop through each button and add an event listener for the 'click' event
+    likeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Toggle the 'liked' class on the <i> element when clicked
+            button.classList.toggle('liked');
+        });
+    });
+}
+
 // support function
 document.addEventListener('DOMContentLoaded', () => {
     const surveyForm = document.getElementById('customer-survey');
@@ -222,5 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
         surveyForm.reset();
     });
 });
+
 
 

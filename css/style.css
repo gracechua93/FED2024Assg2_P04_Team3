@@ -593,6 +593,7 @@ footer .heading {
 .product-item p {
     margin: 0;
 }
+
 .product-item {
     background-color: #fff;
     border: 1px solid black;
@@ -601,6 +602,9 @@ footer .heading {
     padding: 10px;
     cursor: pointer; /* Changes the cursor to a pointer to indicate interactivity */
     transition: transform 0.2s ease; /* Adds a hover effect for a smoother interaction */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    min-height: 390px; /* Ensure it has a minimum height, but can grow */
 }
 
 .product-item img {
@@ -609,13 +613,42 @@ footer .heading {
 }
 
 .product-link {
-    text-decoration: none; /* Removes underline from the link */
+    text-decoration: none; 
     color: inherit; /* Keeps the text color the same as the parent element */
     display: inline-block; /* Ensures the link behaves like a block for the div */
 }
 
 .product-item:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.product-details-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1; 
+}
+
+.like-button {
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.like-button i {
+    font-size: 1.2em;
+    color: black;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.like-button:hover {
+    background-color: red;
+}
+
+.like-button i.liked {
+    color: red;  
 }
 
 /* Price filter */
