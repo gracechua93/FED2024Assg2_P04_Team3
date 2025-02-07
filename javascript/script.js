@@ -1,30 +1,30 @@
 // script.js
 
 // Firebase Configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyBSa4poUSDiUzeoSYLQ820dOAkY6O8GUAI",
-    authDomain: "fedtest-92d2a.firebaseapp.com",
-    projectId: "fedtest-92d2a",
-    storageBucket: "fedtest-92d2a.firebasestorage.app",
-    messagingSenderId: "861537843799",
-    appId: "1:861537843799:web:88ffab07af36ae27344112",
-    measurementId: "G-3QYRFVJXMG"
-};
+// const firebaseConfig = {
+//     apiKey: "AIzaSyBSa4poUSDiUzeoSYLQ820dOAkY6O8GUAI",
+//     authDomain: "fedtest-92d2a.firebaseapp.com",
+//     projectId: "fedtest-92d2a",
+//     storageBucket: "fedtest-92d2a.firebasestorage.app",
+//     messagingSenderId: "861537843799",
+//     appId: "1:861537843799:web:88ffab07af36ae27344112",
+//     measurementId: "G-3QYRFVJXMG"
+// };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
-// Google Authentication Function
-const provider = new firebase.auth.GoogleAuthProvider();
+// // Google Authentication Function
+// const provider = new firebase.auth.GoogleAuthProvider();
 
-function googleLogin() {
-    firebase.auth().signInWithPopup(provider)
-        .then((result) => {
-            console.log(result.user);
-            alert("Logged in as " + result.user.displayName);
-        })
-        .catch((error) => console.log(error));
-}
+// function googleLogin() {
+//     firebase.auth().signInWithPopup(provider)
+//         .then((result) => {
+//             console.log(result.user);
+//             alert("Logged in as " + result.user.displayName);
+//         })
+//         .catch((error) => console.log(error));
+// }
 
 // Signup Function
 document.getElementById("signup-form")?.addEventListener("submit", function (e) {
@@ -268,18 +268,21 @@ else if (path.includes('checkout.html')) {
 }
 
 else if (path.includes('index.html')) {
-    document.addEventListener('DOMContentLoaded', () => {
-        console.log('hi');
-        // Select the menu toggle icon and side navigation
-        const menuToggle = document.querySelector('.menu-toggle');
-        const sideNav = document.querySelector('.side-nav');
+    // Select the menu toggle icon and side navigation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sideNav = document.querySelector('.side-nav');
+    const closeBtn = document.querySelector('.close-btn');
 
-        // Add click event listener to the menu toggle
-        menuToggle.addEventListener('click', () => {
-            console.log('hi');
-            // Toggle the 'active' class to show/hide the side navigation
-            sideNav.classList.toggle('active');
-        });
+    // Add click event listener to the menu toggle
+    menuToggle.addEventListener('click', () => {
+        // Toggle the 'active' class to show/hide the side navigation
+        sideNav.classList.toggle('active');
+    });
+
+    // Close the navigation and redirect to index when the 'X' button is clicked
+    closeBtn.addEventListener('click', () => {
+        sideNav.classList.remove('active');
+        window.location.href = 'index.html'; // Redirect to the index page
     });
 }
 

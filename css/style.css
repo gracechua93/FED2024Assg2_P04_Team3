@@ -1959,7 +1959,7 @@ input:checked + .slider i {
     top: 0;
     right: 0;
     height: 100%;
-    background-color: #333;
+    background-color: #a79285;
     overflow: hidden;
     transition: 0.5s;
     z-index: 50;
@@ -1968,10 +1968,13 @@ input:checked + .slider i {
 .side-nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .side-nav ul li {
     padding: 15px 25px;
+
 }
 
 .side-nav ul li a {
@@ -1980,6 +1983,16 @@ input:checked + .slider i {
     display: block;
     font-size: 20px;
     transition: 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.2em;
+    color: black;
+    cursor: pointer;
+    z-index: 100;
 }
 
 @media screen and (max-width: 402px) {
@@ -2126,9 +2139,11 @@ input:checked + .slider i {
         font-size: 0.6em;
     }
 
-    .side-nav.active {
-        width: 250px;
+    .side-nav.active  {
+        width: 200px;
     }
+
+
 
 
 
