@@ -127,6 +127,10 @@ header nav ul li a {
     font-size: 1.2em;
 }
 
+header .menu-icon {
+    display: none;
+}
+
 /* Login Dropdown */
 .dropdown-menu {
     display: none;
@@ -1948,3 +1952,152 @@ input:checked + .slider i {
     color: #555;
 }
 
+
+@media screen and (max-width: 402px) {
+    body {
+        height: 100%; /* Ensures body takes full height */
+        overflow-y: scroll; /* Always show vertical scrollbar if needed */
+    }
+
+    header {
+        background: #fff;
+        padding: 10px;
+    }
+    header .logo {
+        font-size: 1.3em;
+    }
+    
+    header .top-header .search-bar input{
+        margin: 0 0 10px 0;
+        font-size: 0.7em;
+    }
+
+    header .top-header .search-bar .search {
+        width: 15px;
+        height: 15px;
+    }
+
+    header .top-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .login, .account {
+        display: none;
+    }
+    
+
+    header .top-header .menu-icon {
+        display: block;
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    header .top-header .cart {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+    
+    header nav ul {
+        font-size: 0.8em;
+        gap: 0;
+    }
+
+    .banner{
+        padding: 20px;
+        font-size: 0.6em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+
+    .banner h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    .banner > div {
+        flex: unset;
+    }
+
+    .banner img {
+        display: none;
+    }
+
+    .popular-categories {
+        padding: 20px;
+        height: auto;
+    }
+
+    .popular-categories h2 {
+        font-size: 2em;
+    }
+
+    .categories {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .category {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category img {
+        width: 200px;
+        height: auto;
+    }
+
+    .new-listings {
+        padding: 20px;
+        height: auto;
+    }
+
+    .new-listings h2 {
+        font-size: 2em;
+    }
+
+    .listings {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .listing {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .listing img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* Ensure the footer sticks to the bottom */
+    footer {
+        margin-top: auto; /* Push the footer to the bottom of the page */
+        padding: 20px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 0.5em;
+    }
+
+    .footer-links {
+        font-size: 0.6em;
+    }
+
+
+
+
+}
