@@ -127,9 +127,9 @@ header nav ul li a {
     font-size: 1.2em;
 }
 
-header .menu-icon {
+/* header .menu-toggle {
     display: none;
-}
+} */
 
 /* Login Dropdown */
 .dropdown-menu {
@@ -1952,6 +1952,35 @@ input:checked + .slider i {
     color: #555;
 }
 
+/* slide in nav */
+.side-nav {
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 50;
+}
+
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-nav ul li {
+    padding: 15px 25px;
+}
+
+.side-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    transition: 0.3s;
+}
 
 @media screen and (max-width: 402px) {
     body {
@@ -1989,7 +2018,7 @@ input:checked + .slider i {
     }
     
 
-    header .top-header .menu-icon {
+    header .top-header .menu-toggle {
         display: block;
         width: 20px;
         margin-left: 10px;
@@ -2095,6 +2124,10 @@ input:checked + .slider i {
 
     .footer-links {
         font-size: 0.6em;
+    }
+
+    .side-nav.active {
+        width: 250px;
     }
 
 

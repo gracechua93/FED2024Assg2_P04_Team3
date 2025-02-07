@@ -267,6 +267,25 @@ else if (path.includes('checkout.html')) {
     });
 }
 
+else if (path.includes('index.html')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        console.log('hi');
+        // Select the menu toggle icon and side navigation
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sideNav = document.querySelector('.side-nav');
+
+        // Add click event listener to the menu toggle
+        menuToggle.addEventListener('click', () => {
+            console.log('hi');
+            // Toggle the 'active' class to show/hide the side navigation
+            sideNav.classList.toggle('active');
+        });
+    });
+}
+
+
+
+
 // support function
 document.addEventListener('DOMContentLoaded', () => {
     const surveyForm = document.getElementById('customer-survey');
