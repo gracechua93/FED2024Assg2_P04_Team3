@@ -1469,7 +1469,7 @@ input:checked + .slider i {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: grey;
+    background-color: lightgray;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -1481,8 +1481,13 @@ input:checked + .slider i {
     font-size: 1.5em;
 }
 
+.cart-process div.active div {
+    background-color: black; 
+    color: white; 
+}
+
 .cart-header {
-    padding: 30px;
+    padding: 30px 30px 0 30px;
 }
 
 .cart-header section{
@@ -1507,7 +1512,6 @@ input:checked + .slider i {
     padding: 0 30px 30px 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .cart-item {
@@ -1544,35 +1548,49 @@ input:checked + .slider i {
     color: black;
     cursor: pointer;
     padding: 10px;
-    width: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: auto;
 }
 
 .delete-btn i {
-    position: relative;
-    display: inline-block;
-    width: 60px;
+    font-size: 1em;
+    height: 24px;
 }
 
 .cart-footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
     gap: 20px;
-    border-top: 2px solid #000;
+    margin-top: 20px;
 }
 
-.shipping-section, .summary, .actions {
+.shipping-section, .summary {
     flex: 1 1 200px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.summary p {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
 .shipping-section input, .shipping-section select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 50%;
 }
 
 .actions button {
@@ -1582,6 +1600,10 @@ input:checked + .slider i {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.actions a {
+    color: white;
 }
 
 .actions button:last-child {
