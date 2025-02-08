@@ -2338,6 +2338,106 @@ input:checked + .slider i {
         flex-direction: column;
     }
 
+    /* promote */
+    #create-product-listing {
+        margin: 10px;
+        flex-direction: column;
+    }
 
+    #nav-sidebar {
+        display: flex;
+        justify-content: center;
+    }
 
-}
+    .featured-listings {
+        padding: 10px;
+    }
+
+    #promote-content h2 {
+        font-size: 1.2em;
+    }
+
+    .listings-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .line2 {
+        width: 100%;
+    }
+
+    #create-product-content {
+        font-size: 0.9em;
+    }
+
+    #account-details {
+        font-size: 0.9em;
+        padding: 0;
+    }
+
+    #account-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #account-content .profile {
+        font-size: 0.8em;
+    }
+
+    #account-content .profile .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    #account-content .details {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #account-content .details .account-box {
+        font-size: 0.8em;
+    }
+
+    #account-content .details .address-box {
+        font-size: 0.8em;
+    }
+
+    #account-content .details .subscription-box {
+        font-size: 0.8em;
+    }
+
+    .active-listings {
+        font-size: 0.9em;
+    }
+
+    .active-listings .listings-grid {
+        flex-direction: column;
+    }
+
+    .active-listings .listings-grid .listings {
+        flex: unset;
+    }
+
+    /* purchase history */
+    #transaction-history {
+        padding: 10px;
+    }
+
+    #transaction-history h1 {
+        font-size: 1.5em;
+    }
+
+    #transaction-history .past-order {
+        flex-direction: column;
+    }
+
+    #transaction-history .past-order .order-details {
+        width: auto;
+    }
+
+    .past-purchase-list {
+        width: 100%;
+    }
+
+}   
