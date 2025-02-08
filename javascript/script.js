@@ -267,24 +267,24 @@ else if (path.includes('checkout.html')) {
     });
 }
 
-else if (path.includes('index.html')) {
+
     // Select the menu toggle icon and side navigation
     const menuToggle = document.querySelector('.menu-toggle');
     const sideNav = document.querySelector('.side-nav');
     const closeBtn = document.querySelector('.close-btn');
 
-    // Add click event listener to the menu toggle
-    menuToggle.addEventListener('click', () => {
-        // Toggle the 'active' class to show/hide the side navigation
-        sideNav.classList.toggle('active');
-    });
+    if (menuToggle && sideNav && closeBtn) { // Check if elements exist
+        menuToggle.addEventListener('click', () => {
+            sideNav.classList.toggle('active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            sideNav.classList.remove('active');
+        });
+    }
 
-    // Close the navigation and redirect to index when the 'X' button is clicked
-    closeBtn.addEventListener('click', () => {
-        sideNav.classList.remove('active');
-        window.location.href = 'index.html'; // Redirect to the index page
-    });
-}
+
+
 
 
 
