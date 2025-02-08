@@ -127,7 +127,7 @@ header nav ul li a {
     font-size: 1.2em;
 }
 
-header .menu-toggle {
+header .top-header .menu-toggle {
     display: none;
 }
 
