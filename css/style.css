@@ -127,9 +127,9 @@ header nav ul li a {
     font-size: 1.2em;
 }
 
-/* header .menu-toggle {
+header .menu-toggle {
     display: none;
-} */
+}
 
 /* Login Dropdown */
 .dropdown-menu {
