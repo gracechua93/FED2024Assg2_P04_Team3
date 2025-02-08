@@ -1579,18 +1579,26 @@ input:checked + .slider i {
     border-bottom: 1px solid #ccc;
 }
 
-.product-info {
+.cart-item .product-info {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.product-info img {
-    width: 60px;
-    height: 60px;
+.cart-item .product-info img {
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.cart-item, .product-info p {
+    margin: 0;
+}
+
+.cart-item, .product-info h4 {
+    margin: 5px 0;
 }
 
 .quantity input {
@@ -1611,6 +1619,7 @@ input:checked + .slider i {
     align-items: center; 
     justify-content: center; 
     padding: auto;
+    margin: 0;
 }
 
 .delete-btn i {
