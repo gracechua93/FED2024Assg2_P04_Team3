@@ -284,15 +284,232 @@ else if (path.includes('checkout.html')) {
     }
 
 
+// mystery box function
 
+class MysteryBox {
+    constructor() {
+        this.prizes = [
+            { points: 0, weight: 40 },    // 40% chance
+            { points: 10, weight: 30 },   // 30% chance
+            { points: 50, weight: 15 },   // 15% chance
+            { points: 100, weight: 10 },  // 10% chance
+            { points: 500, weight: 4 },   // 4% chance
+            { points: 1000, weight: 1 }   // 1% chance
+        ];
+        
+        this.boxElement = document.getElementById('mysteryBox');
+        this.timerElement = document.getElementById('timer');
+        this.init();
+    }
 
+    init() {
+        this.updateBoxState();
+        setInterval(() => this.updateBoxState(), 1000);
+        this.boxElement.addEventListener('click', () => this.handleClick());
+    }
 
+    getNextOpenTime() {
+        const now = new Date();
+        const gmt8Offset = 8 * 60 * 60 * 1000; // GMT+8 offset in milliseconds
+        const gmt8Time = new Date(now.getTime() + gmt8Offset);
+        const nextReset = new Date(gmt8Time);
+        nextReset.setHours(24, 0, 0, 0); // Set to next midnight GMT+8
+        
+        const lastOpen = localStorage.getItem('lastBoxOpen');
+        if (!lastOpen) return null;
+        
+        const lastOpenDate = new Date(parseInt(lastOpen));
+        const timeSinceOpen = now - lastOpenDate;
+        
+        if (timeSinceOpen < 24 * 60 * 60 * 1000) { // Less than 24 hours
+            return new Date(lastOpenDate.getTime() + 24 * 60 * 60 * 1000);
+        }
+        
+        return null;
+    }
 
+    updateBoxState() {
+        const nextOpenTime = this.getNextOpenTime();
+        
+        if (nextOpenTime) {
+            const timeRemaining = nextOpenTime - new Date();
+            if (timeRemaining > 0) {
+                const hours = Math.floor(timeRemaining / (60 * 60 * 1000));
+                const minutes = Math.floor((timeRemaining % (60 * 60 * 1000)) / (60 * 1000));
+                const seconds = Math.floor((timeRemaining % (60 * 1000)) / 1000);
+                
+                this.timerElement.textContent = `Next box available in: ${hours}h ${minutes}m ${seconds}s`;
+                this.boxElement.classList.add('disabled');
+            } else {
+                this.timerElement.textContent = 'Box is ready!';
+                this.boxElement.classList.remove('disabled');
+            }
+        } else {
+            this.timerElement.textContent = 'Box is ready!';
+            this.boxElement.classList.remove('disabled');
+        }
+    }
+
+    getRandomPrize() {
+        const totalWeight = this.prizes.reduce((sum, prize) => sum + prize.weight, 0);
+        let random = Math.random() * totalWeight;
+        
+        for (const prize of this.prizes) {
+            random -= prize.weight;
+            if (random <= 0) return prize.points;
+        }
+        
+        return this.prizes[0].points; // Fallback
+    }
+
+    showPrizeAnimation(points) {
+        const prizeElement = document.createElement('div');
+        prizeElement.className = 'prize-animation';
+        prizeElement.innerHTML = `
+            <h2>Your Prize!</h2>
+            <div class="prize-points">${points} Points</div>
+            <button class="close-button">Close</button>
+        `;
+        
+        document.body.appendChild(prizeElement);
+        
+        prizeElement.querySelector('.close-button').addEventListener('click', () => {
+            prizeElement.remove();
+        });
+    }
+
+    handleClick() {
+        if (this.boxElement.classList.contains('disabled')) return;
+        
+        const points = this.getRandomPrize();
+        localStorage.setItem('lastBoxOpen', new Date().getTime());
+        this.updateBoxState();
+        this.showPrizeAnimation(points);
+        
+        // Add points to the points system
+        window.pointsSystem.addPoints(points);
+    }
+    
+}
+
+class PointsSystem {
+    constructor() {
+        this.points = parseInt(localStorage.getItem('userPoints')) || 0;
+        this.rewards = [
+            { name: 'Free Delivery', cost: 50000, code: 'FREEDEL' },
+            { name: '10% Discount', cost: 10000, code: 'DISC10' },
+            { name: '50% Discount', cost: 100000, code: 'DISC50' }
+        ];
+        this.init();
+    }
+
+    init() {
+        this.updatePointsDisplay();
+        this.renderRewards();
+    }
+
+    addPoints(amount) {
+        this.points += amount;
+        localStorage.setItem('userPoints', this.points);
+        this.updatePointsDisplay();
+        this.updateRewardAvailability();
+    }
+
+    updatePointsDisplay() {
+        const pointsDisplay = document.getElementById('pointsDisplay');
+        if (pointsDisplay) {
+            pointsDisplay.textContent = this.points.toLocaleString();
+        }
+    }
+
+    updateRewardAvailability() {
+        this.rewards.forEach(reward => {
+            const button = document.getElementById(`redeem-${reward.cost}`);
+            if (button) {
+                button.disabled = this.points < reward.cost;
+            }
+        });
+    }
+
+    redeemReward(reward) {
+        if (this.points >= reward.cost) {
+            this.points -= reward.cost;
+            localStorage.setItem('userPoints', this.points);
+            this.updatePointsDisplay();
+            this.updateRewardAvailability();
+            this.showRedemptionSuccess(reward);
+        }
+    }
+
+    showRedemptionSuccess(reward) {
+        const notification = document.createElement('div');
+        notification.className = 'redemption-notification';
+        notification.innerHTML = `
+            <h3>Reward Redeemed!</h3>
+            <p>You've successfully redeemed ${reward.name}</p>
+            <p>Your code: <strong>${reward.code}</strong></p>
+            <button class="close-button">Close</button>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        notification.querySelector('.close-button').addEventListener('click', () => {
+            notification.remove();
+        });
+    }
+
+    renderRewards() {
+        const rewardsContainer = document.getElementById('rewardsContainer');
+        if (rewardsContainer) {
+            this.rewards.forEach(reward => {
+                const rewardElement = document.createElement('div');
+                rewardElement.className = 'reward-item';
+                rewardElement.innerHTML = `
+                    <h3>${reward.name}</h3>
+                    <p>${reward.cost.toLocaleString()} points</p>
+                    <button id="redeem-${reward.cost}" 
+                            class="redeem-button" 
+                            ${this.points < reward.cost ? 'disabled' : ''}>
+                        Redeem
+                    </button>
+                `;
+                
+                rewardsContainer.appendChild(rewardElement);
+                
+                rewardElement.querySelector('.redeem-button').addEventListener('click', () => {
+                    this.redeemReward(reward);
+                });
+            });
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Points and Mystery Box only if they exist on the page
+    if (document.getElementById('mysteryBox')) {
+        window.pointsSystem = new PointsSystem();
+        new MysteryBox();
+    }
+const pointsToggle = document.querySelector('.points-toggle');
+const pointsSidebar = document.querySelector('.points-sidebar');
+const pointsClose = document.querySelector('.points-close');
+
+if (pointsToggle && pointsSidebar && pointsClose) {
+    pointsToggle.addEventListener('click', () => {
+        pointsSidebar.classList.toggle('active');
+        pointsToggle.classList.toggle('active');
+    });
+
+    pointsClose.addEventListener('click', () => {
+        pointsSidebar.classList.remove('active');
+        pointsToggle.classList.remove('active');
+    });
+}
+}); 
 
 // support function
-document.addEventListener('DOMContentLoaded', () => {
-    const surveyForm = document.getElementById('customer-survey');
-
+const surveyForm = document.getElementById('surveyForm');
+if (surveyForm) {
     surveyForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -317,7 +534,4 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you for completing our survey!');
         surveyForm.reset();
     });
-});
-
-
-
+}

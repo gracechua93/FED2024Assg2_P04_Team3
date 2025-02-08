@@ -11,7 +11,7 @@
         <nav>
             <div class="top-header">
                 <div class="logo italiana-regular">
-                    <a href="index.html">MokeSell</a>
+                    <a href="../index.html">MokeSell</a>
                 </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
@@ -32,19 +32,32 @@
     </header>
 
     <main>
-        <section id="spin-to-win">
-            <h1 class="playfair-display">Spin to Win</h1>
-            <div class="spin-wheel">
-                <!-- Add your spin wheel code here -->
-            </div>
-            <div class="points-container">
-                <h2 class="lato-regular">Redeem your points</h2>
-                <div class="points-grid">
-                    <!-- Add your points grid code here -->
+        <section id="mystery-box-section">
+            <div class="mystery-box-container">
+                <h1 class="playfair-display">Daily Mystery Box</h1>
+                <div class="mystery-box" id="mysteryBox">
+                    <div class="box-image">?</div>
                 </div>
+                <div class="timer" id="timer"></div>
             </div>
         </section>
     </main>
+
+    <button class="points-toggle">
+        Points & Rewards
+    </button>
+    <div class="points-sidebar">
+        <button class="points-close">×</button>
+        <h2>Your Points</h2>
+        <div class="points-amount" id="pointsDisplay">0</div>
+        <div class="rewards-container" id="rewardsContainer">
+            <!-- Rewards will be dynamically inserted here -->
+        </div>
+    </div>
+
+
+
+
 
     <footer>
         <div class="footer-links">
@@ -67,5 +80,6 @@
         </div>
         <p>© 2025 MokeSell. All Rights Reserved.</p>
     </footer>
+    <script src="../javascript/script.js"></script>
 </body>
 </html>
