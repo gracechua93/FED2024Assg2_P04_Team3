@@ -566,3 +566,21 @@ if (surveyForm) {
         surveyForm.reset();
     });
 }
+
+// publish
+
+document.addEventListener("DOMContentLoaded", function () {
+    const publishButton = document.querySelector(".action-buttons button:last-child"); // Select the "Publish" button
+
+    if (publishButton) {
+        publishButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default form submission (if needed)
+            
+            // Show a pop-up alert (You can replace this with a modal for better UI)
+            alert("Listing created successfully!");
+
+            // Optionally, reset the form
+            document.getElementById("create-product-content").reset();
+        });
+    }
+});
