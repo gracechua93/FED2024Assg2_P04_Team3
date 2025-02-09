@@ -16,6 +16,7 @@ The design process of MokeSell focused on understanding the needs of both seller
 ### Design Artifacts
 Wireframes and mockups for the platform were created using Figma.
 Wireframe: <a href="https://www.figma.com/design/CEg8SKYoZ64x2Z4qVuqH5K/FED_Assg2?node-id=2-2&t=SlzEcksouHJpjprM-1"> Wireframe Link</a>
+GitHub: <a href="https://github.com/gracechua93/FED2024Assg2_P04_Team3">GitHub Link</a>
 
 ## Features
 ### Existing Features
