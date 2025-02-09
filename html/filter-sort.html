@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+        
+        <title>Filter & Sort - MokeSell</title>
+    </head>
+    <body>
+        <section id="filter-page" class="lato-regular">
+            <div id="filter-header">
+                <h2 class="merriweather-regular">Filter & Sort</h2>
+                <span class="close-btn" id="close-filter"><a href="shop-all.html"><i class="fi fi-br-cross"></i></a></span>
+            </div>
+            <div class="line5"></div>
+            
+        
+            <div class="filter-section">
+                <h3>Browse by: <span class="toggle-btn"><i class="fi fi-br-plus"></i></span></h3>
+                <div class="line5"></div>
+              <div class="filter-options">
+                <label><input type="radio" name="category" value="fashion"> Fashion & Accessories</label>
+                <label><input type="radio" name="category" value="electronics"> Electronics</label>
+                <label><input type="radio" name="category" value="home"> Home & Furniture</label>
+                <!-- Add other categories here -->
+              </div>
+            </div>
+        
+            <div class="filter-section">
+              <h3>Price: <span class="toggle-btn"><i class="fi fi-br-plus"></i> </span></h3>
+              <div class="line5"></div>
+              <div class="filter-options">
+                <div class="price-range">
+                  <span>$0</span>
+                  <span>$500</span>
+                </div>
+                <input type="range" class="range-slider" min="0" max="500">
+              </div>
+            </div>
+        </section>
+
+
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>

@@ -267,6 +267,37 @@ else if (path.includes('checkout.html')) {
     });
 }
 
+else if (path.includes('filter-sort.html')) {
+    document.addEventListener("DOMContentLoaded", () => {
+        // Close Filter & Sort Section
+        const closeFilterBtn = document.getElementById("close-filter");
+        const filterPage = document.getElementById("filter-page");
+      
+        closeFilterBtn.addEventListener("click", () => {
+          filterPage.style.display = "none"; // Hides the filter page
+        });
+      
+        // Toggle Filter Sections
+        const toggleButtons = document.querySelectorAll(".filter-section .toggle-btn");
+      
+        toggleButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const filterOptions = btn.parentElement.nextElementSibling; // Get the sibling div with options
+            const icon = btn.querySelector("i");
+      
+            // Toggle visibility
+            if (filterOptions.style.display === "block") {
+              filterOptions.style.display = "none"; // Hide options
+              icon.className = "fi fi-br-plus"; // Change back to plus icon
+            } else {
+              filterOptions.style.display = "block"; // Show options
+              icon.className = "fi fi-br-minus"; // Change to minus icon
+            }
+          });
+        });
+    });
+}
+
 
     // Select the menu toggle icon and side navigation
     const menuToggle = document.querySelector('.menu-toggle');
