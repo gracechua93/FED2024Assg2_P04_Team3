@@ -89,7 +89,6 @@ User-bag free interface icon:
 Shop free interface icon:  
 <a href="https://www.flaticon.com/free-icon-font/shop_3916657">Icons by UICONS</a>  
 Chart-mixed-up-circle-dollar free interface icon:  
-<i class="fi fi-rr-chart-mixed-up-circle-dollar"></i>  
 <a href="https://www.flaticon.com/free-icon-font/chart-mixed-up-circle-dollar_16106358">Icons by UICONS</a>  
 Megaphone free interface icon:  
 <a href="https://www.flaticon.com/free-icon-font/megaphone_3914404">Icons by UICONS</a>  
@@ -117,7 +116,7 @@ Laptop free sticker:
 Zipper fashion casual clothing background:  
 <a href="https://www.freepik.com/free-photo/zipper-fashion-casual-clothing-background_1095673.htm#fromView=image_search_similar&page=1&position=13&uuid=7d3d1146-6698-4a96-8015-013cb584cad3&query=windbreaker">Windbreaker</a>  
 Simple white crew neck unisex streetwear apparel:  
-<a href="https://www.freepik.com/free-photo/simple-white-crew-neck-unisex-streetwear-apparel_16007206.htm#fromView=search&page=1&position=4&uuid=8006fc3c-3514-46e0-8983-3261ac74776a&query=sweater">White Crewneck</a>
+<a href="https://www.freepik.com/free-photo/simple-white-crew-neck-unisex-streetwear-apparel_16007206.htm#fromView=search&page=1&position=4&uuid=8006fc3c-3514-46e0-8983-3261ac74776a&query=sweater">White Crewneck</a>  
 Pants:  
 <a href="https://www.freepik.com/free-photo/pants_1123023.htm#fromView=search&page=2&position=26&uuid=a15288f2-ab56-4f68-bdc4-905cd34e85fe&query=Skirt">Pants</a>  
 
