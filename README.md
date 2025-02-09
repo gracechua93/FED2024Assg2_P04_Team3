@@ -37,7 +37,7 @@ Wireframe: <a href="https://www.figma.com/design/CEg8SKYoZ64x2Z4qVuqH5K/FED_Assg
 ## Assistive AI
 ChatGPT: Assisted in generating the feature roadmap and debugging JavaScript for the different features. Screenshots of AI-generated code are included in the "credits" folder of the project.
 
-1. Add to Cart Animation. ChatGPT was used to help fix the implementation of the animation.<img src="/credits/Screenshot 2025-02-09 220332.png>
+1. Add to Cart Animation. ChatGPT was used to help fix the implementation of the animation.<img src="/credits/Screenshot 2025-02-09 220332.png">
 
 ## Testing
 
