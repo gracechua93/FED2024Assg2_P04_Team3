@@ -62,7 +62,8 @@ ChatGPT: Assisted in generating the feature roadmap and debugging JavaScript for
 ### Content
 Description by Chatgpt.
 ### Media
-The logos were taken from Freepik["https://www.freepik.com/] and Flaticon["https://www.flaticon.com/"].  
+The logos were taken from [Freepik](https://www.freepik.com/) and [Flaticon](https://www.flaticon.com/).  
+Icons:  
 Account icon:  
 <a href="https://www.freepik.com/icon/account_3033143#fromView=family&page=1&position=2&uuid=afbaf1d8-116f-4f7a-b54f-65ffee30dec6">Icon by Phoenix Group</a>  
 Shopping bag icon:  
@@ -74,38 +75,31 @@ Down Chevron free icon:
 Message free icon:  
 <a href="https://www.flaticon.com/free-icons/send" title="send icons">Send icons created by Tanah Basah - Flaticon</a>  
 Toggle On free interface icon:  
-<i class="fi fi-sr-toggle-on"></i>  
 <a href="https://www.flaticon.com/free-icon-font/toggle-on_10469304?page=1&position=&term=toggle&origin=search&related_id=10469304">Icon by UICONS</a>  
 Menu-burger free interface icon:  
-<i class="fi fi-rr-menu-burger"></i>  
 <a href="https://www.flaticon.com/free-icon-font/menu-burger_3917215?page=1&position=3&term=menu&origin=search&related_id=3917215">Icon by UICONS</a>  
 Cross free interface icon:  
-<i class="fi fi-br-cross"></i>  
 <a href="https://www.flaticon.com/free-icon-font/cross_3917759">Icons by UICONS</a>  
 Home free interface icon:  
-<i class="fi fi-rr-home"></i>  
 <a href="https://www.flaticon.com/free-icon-font/home_3917033">Icons by UICONS</a>  
 Box-open free interface icon:  
-<i class="fi fi-rr-box-open"></i>  
 <a href="https://www.flaticon.com/free-icon-font/box-open_9238295">Icons by UICONS</a>  
 User-bag free interface icon:  
-<i class="fi fi-rs-user-bag"></i>  
 <a href="https://www.flaticon.com/free-icon-font/user-bag_17819122">Icons by UICONS</a>  
 Shop free interface icon:  
-<i class="fi fi-rr-shop"></i>  
 <a href="https://www.flaticon.com/free-icon-font/shop_3916657">Icons by UICONS</a>  
 Chart-mixed-up-circle-dollar free interface icon:  
 <i class="fi fi-rr-chart-mixed-up-circle-dollar"></i>  
 <a href="https://www.flaticon.com/free-icon-font/chart-mixed-up-circle-dollar_16106358">Icons by UICONS</a>  
 Megaphone free interface icon:  
-<i class="fi fi-rr-megaphone"></i>  
 <a href="https://www.flaticon.com/free-icon-font/megaphone_3914404">Icons by UICONS</a>  
 Plus free interface icon:  
-<i class="fi fi-br-plus"></i>  
 <a href="https://www.flaticon.com/free-icon-font/plus_3917757">Icons by UICONS</a>  
 Minus free interface icon:  
-<i class="fi fi-rr-minus"></i>  
 <a href="https://www.flaticon.com/free-icon-font/minus_3917153">Icons by UICONS</a>  
+Heart free interface icon:  
+<a href="https://www.flaticon.com/free-icon-font/heart_3916579">Icon by UICONS</a>  
+Images:  
 Wood cutting board on tablecloth:  
 <a href="https://www.freepik.com/free-photo/wood-cutting-board-tablecloth_3778324.htm#fromView=search&page=1&position=49&uuid=0c649e0e-70c0-4ca3-a2bd-fb84d6bd5ffe&query=wooden+cutting+board">Wooden cutting board</a>  
 Closeup of coffee cup on wooden table:  
@@ -114,9 +108,6 @@ Beautiful elegance and luxury fashion women and blue handbag:
 <a href="https://www.freepik.com/free-photo/beautiful-elegance-luxury-fashion-women-blue-handbag_3982479.htm#fromView=image_search_similar&page=1&position=34&uuid=6494e425-9914-4bb5-8030-444a27d080b5&query=wallet">Blue Handbag</a>  
 Still life of glasses with slightly rounded frames:  
 <a href="https://www.freepik.com/free-photo/still-life-glasses-with-slightly-rounded-frames_60893489.htm#fromView=search&page=1&position=2&uuid=2b6bd30e-9fb1-4678-8470-a99788c22a11&query=glasses">Rounded Frames Glasses</a>  
-Heart free interface icon:  
-<i class="fi fi-rr-heart"></i>  
-<a href="https://www.flaticon.com/free-icon-font/heart_3916579">Icon by UICONS</a>  
 Fashion Collection Design Shopping Graphic Words:  
 <a href="https://www.freepik.com/free-photo/fashion-collection-design-shopping-graphic-words_18929829.htm#fromView=search&page=1&position=20&uuid=b71d922f-8ebe-4101-b1d9-ea31edc85e7a&query=thrift+store+banner">Fashion Banner</a>  
 Shop free sticker:  
