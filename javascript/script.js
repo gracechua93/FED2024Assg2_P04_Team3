@@ -298,6 +298,42 @@ else if (path.includes('filter-sort.html')) {
     });
 }
 
+else if (path.includes('product.html')) {
+    let isAdded = false;  // Flag to ensure the button is clicked only once
+
+    document.getElementById("add-to-cart").addEventListener("click", function() {
+        // Find the cart number element
+        let cartNumber = document.querySelector(".cart-number");
+
+        // Check if the cart number element exists
+        if (cartNumber) {
+            if (!isAdded) {
+                // Increment the cart number by 1
+                let currentNumber = parseInt(cartNumber.innerText);
+
+                // Show the cart number and increment it
+                currentNumber += 1;
+                cartNumber.innerText = currentNumber;
+
+                // Make sure the cart number is visible if it's not already
+                cartNumber.style.display = "inline-block";  // Ensure it's visible
+
+                // Animation: Pop-in effect for the cart number
+                cartNumber.style.transform = "scale(0)";
+                cartNumber.style.transition = "transform 0.3s ease-in-out";
+                setTimeout(function() {
+                    cartNumber.style.transform = "scale(1)";
+                }, 10);
+
+                // Set the flag to true to prevent future clicks from adding to the cart
+                isAdded = true;
+            }
+        } else {
+            console.error("Cart number element not found!");
+        };
+    });
+};
+
 
     // Select the menu toggle icon and side navigation
     const menuToggle = document.querySelector('.menu-toggle');

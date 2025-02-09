@@ -220,7 +220,7 @@ header .top-header p a:hover {
 }
 
 .category {
-    background: #C8D9E6;
+    background: #E7ECEE;
     font-size: 1.5em;
     padding: 30px;
     border-radius: 5px;
@@ -270,7 +270,7 @@ button:hover {
 }
 
 .listing {
-    background: #C8D9E6;
+    background: #E7ECEE;
     padding: 20px;
     font-size: 1.5em;
     border-radius: 5px;
@@ -1511,6 +1511,24 @@ input:checked + .slider i {
     margin: 0;
 }
 
+/* Add to cart */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-number {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background: #e20000;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 11px;
+    display: none; /* Hidden by default */
+}
+
 /* Shopping Cart */
 .cart-title {
     background-color: #F5EFEB;
@@ -1542,7 +1560,7 @@ input:checked + .slider i {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightgray;
+    background-color: #EDEDED;
     border-radius: 50%;
     width: 40px;
     height: 40px;
