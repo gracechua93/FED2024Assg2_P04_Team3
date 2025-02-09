@@ -28,18 +28,18 @@
             <form id="login-form">
                 <div class="form-group">
                     <label for="login-email" class="lato-regular">Email:</label>
-                    <input type="email" id="login-email" placeholder="Enter your email" >
+                    <input type="email" id="login-email" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="login-password" class="lato-regular">Password:</label>
-                    <input type="password" id="login-password" placeholder="Enter your password" >
+                    <input type="password" id="login-password" placeholder="Enter your password">
                 </div>
                 <button type="submit" class="lato-regular">Login</button>
             </form>
             <p class="lato-regular">Don't have an account? <a href="signup.html">Sign Up</a></p>
         </main>
 
-        <div id="loading-animation"  style="display: none;">
+        <div id="loading-animation" style="display: none;">
             <dotlottie-player
                 src="https://lottie.host/974393c4-555b-470e-8f4e-ea8ed33d0a10/z3DSTcF8lt.lottie"
                 background="transparent"
@@ -50,8 +50,11 @@
             ></dotlottie-player>
         </div>
 
-        <script src="../javascript/script.js"></script>
+        <!-- Firebase Scripts -->
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+        
+        <!-- Your Custom Script -->
+        <script src="../javascript/script.js" type="module"></script>
     </body>
 </html>
