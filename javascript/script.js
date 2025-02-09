@@ -1,54 +1,30 @@
 // script.js
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
 // Firebase Configuration
-// const firebaseConfig = {
-//     apiKey: "AIzaSyBSa4poUSDiUzeoSYLQ820dOAkY6O8GUAI",
-//     authDomain: "fedtest-92d2a.firebaseapp.com",
-//     projectId: "fedtest-92d2a",
-//     storageBucket: "fedtest-92d2a.firebasestorage.app",
-//     messagingSenderId: "861537843799",
-//     appId: "1:861537843799:web:88ffab07af36ae27344112",
-//     measurementId: "G-3QYRFVJXMG"
-// };
+const firebaseConfig = {
+    apiKey: "AIzaSyBSa4poUSDiUzeoSYLQ820dOAkY6O8GUAI",
+    authDomain: "fedtest-92d2a.firebaseapp.com",
+    projectId: "fedtest-92d2a",
+    storageBucket: "fedtest-92d2a.firebasestorage.app",
+    messagingSenderId: "861537843799",
+    appId: "1:861537843799:web:88ffab07af36ae27344112",
+    measurementId: "G-3QYRFVJXMG"
+};
 
-// // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-
-// // Google Authentication Function
-// const provider = new firebase.auth.GoogleAuthProvider();
-
-// function googleLogin() {
-//     firebase.auth().signInWithPopup(provider)
-//         .then((result) => {
-//             console.log(result.user);
-//             alert("Logged in as " + result.user.displayName);
-//         })
-//         .catch((error) => console.log(error));
-// }
-
-// Signup Function
-document.getElementById("signup-form")?.addEventListener("submit", function (e) {
-    e.preventDefault();
-    let email = document.getElementById("signup-email").value;
-    let password = document.getElementById("signup-password").value;
-
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            alert("Signup successful!");
-            window.location.href = "login.html"; // Redirect to login page
-        })
-        .catch((error) => {
-            alert(error.message);
-        });
-});
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 // Login Function
-document.getElementById("login-form")?.addEventListener("submit", function (e) {
+document.getElementById("login-form")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    let email = document.getElementById("login-email").value;
-    let password = document.getElementById("login-password").value;
+    const email = document.getElementById("login-email").value;
+    const password = document.getElementById("login-password").value;
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             alert("Login successful!");
             window.location.href = "../index.html"; // Redirect after login
@@ -57,6 +33,35 @@ document.getElementById("login-form")?.addEventListener("submit", function (e) {
             alert(error.message);
         });
 });
+
+
+// Google Authentication Function
+const provider = new GoogleAuthProvider();
+function googleLogin() {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      console.log(result.user);
+      alert("Logged in as " + result.user.displayName);
+    })
+    .catch((error) => console.log(error));
+}
+
+// Signup Function
+document.getElementById("signup-form")?.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const email = document.getElementById("signup-email").value;
+  const password = document.getElementById("signup-password").value;
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      alert("Signup successful!");
+      window.location.href = "login.html"; // Redirect to login page
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
+});
+
 
 const path = window.location.pathname;
 
@@ -620,3 +625,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const checkoutForm = document.getElementById("checkout-form");
+
+    checkoutForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const name = document.getElementById("name").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const payment = document.getElementById("payment").value;
+
+        if (name === "" || address === "" || payment === "") {
+            alert("Please fill out all fields before proceeding.");
+        } else {
+            window.location.href = "order-complete.html"; // Redirect on successful validation
+        }
+    });
+});
+
